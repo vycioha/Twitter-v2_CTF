@@ -6,10 +6,10 @@ Participants are given access to the source code of the application, which is a 
 
 The primary objective of this challenge is to retrieve a secret flag stored in the application's database. To achieve this, participants must successfully exploit two key vulnerabilities:
 
-## JKU Injection
+### 1. JKU Injection
 This stage involves manipulating the JSON Web Key Set (JKWS) in order to gain unauthorized privileges within the application. In "Twitter v2", only users with an invitation can post messages.
 
-## Blind SQL Injection
+### 2. Blind SQL Injection
 After gaining initial access, participants must leverage a blind SQL injection vulnerability to read sensitive data from the database, ultimately leading to the discovery of the secret flag.
 
 As we progress through the challenge, we will dissect each vulnerability, explore the methodologies used for exploitation, and discuss the best practices for remediation.
