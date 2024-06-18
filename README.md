@@ -406,7 +406,7 @@ Connection: keep-alive
 ```
 
 3. **Automate the Process**:
-   To automate the process of secret flag retrieval, a custom Python script was used (see Appendix A). The script performs both JKU header injection and Blind SQL injection to find the value of the flag:
+   To automate the process of secret flag retrieval, a custom Python script was used (see CTF_Script.py). The script performs both JKU header injection and Blind SQL injection to find the value of the flag:
 
 ```
 Trying to exploit JKU injection.
@@ -443,7 +443,7 @@ HTTP Response:
 └────────────────────────────────────────────────────────────────────────────────────────────────
 HTTP response indicates that the JKU injection was successful.
 
-Starting flag retrieval for SQL Injection...
+Starting flag retrieval - SQL Injection...
 on 35: Current flag: C
 Searching #1 |▉▉▉▉▉▉▉▉▉▉▉▉▉▉▋⚠                        | (!) 35/95 [37%] in 4.5s (7.63/s) 
 on 52: Current flag: CT
