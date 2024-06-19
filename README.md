@@ -20,9 +20,7 @@ As we progress through the challenge, we will dissect each vulnerability, explor
 In the "Twitter v2" CTF challenge, a critical aspect of the attack strategy involves analyzing the source code of the web application. The source code, accessible for download at `ctf.redacted.com/download`, provides valuable insights into the application's inner workings and potential vulnerabilities. An essential feature of this setup is the `build-docker.sh` script, which enables participants to run the application locally. This setup is crucial for testing various exploits in a controlled environment without any external limitations or constraints.
 
 ### Analysis of auth.js
-
 The `auth.js` file primarily handles JWT creation and verification. Key observations include:
-
 #### JWT Creation (createJWT function):
 - Generates JWTs with `hasInvitation: false` and a random `tweeterID`.
 - Uses RS256 algorithm with a private key located at `./jwt/private.key`.
@@ -94,9 +92,7 @@ const verifyJWT = async (req, res, next) => {
 }
 ```
 ### Analysis of database.js
-
 The `database.js` file manages database interactions. Key observations include:
-
 #### Database Setup (setupDatabase function):
 - Creates `tweets` and `secrets` tables.
 - Inserts a test flag into the `secrets` table.
@@ -158,7 +154,8 @@ eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImI4YmJkZjVlLWZiMGYtNDc1NC1hMDJkLWU0
 ```
 
 2. **Use a JWT decoding tool to decode the initial JWT token issued by the application. Focus on understanding the structure of the JWT, specifically the header and payload**:
-- **Header**: observe the JSON Web Key URL (jku).
+
+-**Header**: observe the JSON Web Key URL (jku).
 ```json
   {
     "alg": "RS256",
@@ -168,7 +165,7 @@ eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImI4YmJkZjVlLWZiMGYtNDc1NC1hMDJkLWU0
   }
 ```
 
-- **Payload**: identify key-value pairs, particularly those related to user privileges such as `hasInvitation`.
+-**Payload**: identify key-value pairs, particularly those related to user privileges such as `hasInvitation`.
 ```json
   {
     "hasInvitation": false,
@@ -355,7 +352,7 @@ Connection: keep-alive
   "data":{
     "tweetID":6536,
     "tweeterID":"82a9543ee4775c0838186c133323b37ab00059c681aeec27339f2b5309a4927c",
-  "tweet":"1"
+    "tweet":"1"
   }
 }
 ```
