@@ -1,6 +1,6 @@
 <h1 align="center">"Twitter v2" CTF Writeup</h1>
 
-In this Capture the Flag (CTF) challenge hosted by Vinted, participants are presented with a scenario centered around a web application and an API that mimics the functionalities of a Twitter-like platform, aptly named "Twitter v2". As an example the CTF was hosted on  `ctf.redacted.com`. 
+In this Capture the Flag (CTF) challenge hosted by Vinted, participants are presented with a scenario centered around a web application that mimics the functionalities of a Twitter-like platform, aptly named "Twitter v2". As an example the CTF was hosted on  `ctf.redacted.com`. 
 
 Participants are given access to the source code of the application, which is a critical resource for conducting a thorough security analysis and identifying potential vulnerabilities.
 
